@@ -9,8 +9,6 @@ on:
       - synchronize
       - closed
 
-concurrency: preview-${{ github.ref }}
-
 jobs:
   deploy-preview:
     runs-on: ubuntu-20.04
@@ -18,9 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Deploy preview
-        - uses: rossjrw/pr-preview-action@v1
-          with:
-            source-dir: .
-            preview-branch: gh-pages
-            umbrella-dir: pr-preview
-            action: auto
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./
