@@ -17,5 +17,3 @@ jobs:
       - uses: rossjrw/pr-preview-action@v2
         with:
           source-dir: .
-          action: auto
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
