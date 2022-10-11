@@ -18,6 +18,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - uses: rossjrw/pr-preview-action@v1
+          with:
+            source-dir: .
+            preview-branch: gh-pages
+            umbrella-dir: pr-preview
+            action: auto
