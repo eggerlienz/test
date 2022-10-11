@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - uses: rossjrw/pr-preview-action@v1
+      - uses: rossjrw/pr-preview-action@v2
         with:
           source-dir: .
           action: auto
