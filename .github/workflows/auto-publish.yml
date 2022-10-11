@@ -3,9 +3,9 @@ name: Validate and Auto Publish Identity Spec
 on:
   push:
     branches:
-      - main
+      - master
     paths:
-      - identity/index.html
+      - index.html
   pull_request: {}
 
 jobs:
